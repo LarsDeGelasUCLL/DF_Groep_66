@@ -1,0 +1,3 @@
+Een maximaal 15 minuten durende video met als naam ‘DF_video_team_XX’ waarin jullie een demo geven van bovenstaande eindresultaten. Het formaat van de video moet kunnen afgespeeld worden in VLC. In deze video toon je al je modellen en leg je uit hoe alles in elkaar zit. Na het fysieke datamodel bouw je de hele databank op in pgAdmin enkel door code te gebruiken. Dan toon je het uitvoeren van de query's en tenslotte breek je het hele schema terug tabel voor tabel af. Test één en ander ruim op voorhand technisch uit (software, videoformaat, microfoon, …)!
+
+Hier komt "DF_video_team_66.mp4".

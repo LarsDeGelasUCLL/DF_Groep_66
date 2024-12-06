@@ -1,8 +1,9 @@
+CREATE SCHEMA IF NOT EXISTS groep_66;
+
 CREATE  TABLE groep_66.dienst ( 
 	dienst_id            char(8)  NOT NULL  ,
 	dienst               varchar(50)  NOT NULL  ,
 	prijs                smallint  NOT NULL  ,
-	datum                date  NOT NULL  ,
 	beschrijving         varchar(200)    ,
 	CONSTRAINT pk_dienst PRIMARY KEY ( dienst_id )
  );
@@ -67,27 +68,27 @@ CREATE  TABLE groep_66.boeking (
 	datum                date  NOT NULL  ,
 	fk_cruise_id         char(7)  NOT NULL  ,
 	fk_passagier_id      char(7)    ,
-	CONSTRAINT pk_boeking PRIMARY KEY ( boeking_id ),
+	CONSTRAINT pk_boeking PRIMARY KEY ( boeking_id )  ,
 	CONSTRAINT fk_boeking_cruise FOREIGN KEY ( fk_cruise_id ) REFERENCES groep_66.cruise( cruise_id )
  );
 
 CREATE  TABLE groep_66.boeking_dienst ( 
 	fk_boeking_id        char(13)  NOT NULL  ,
 	fk_dienst_id         char(8)  NOT NULL  ,
-	CONSTRAINT boeking_dienst_id PRIMARY KEY ( fk_boeking_id, fk_dienst_id ),
+	CONSTRAINT boeking_dienst_id PRIMARY KEY ( fk_boeking_id, fk_dienst_id )  ,
 	CONSTRAINT fk_boeking_dienst_dienst FOREIGN KEY ( fk_dienst_id ) REFERENCES groep_66.dienst( dienst_id )  ,
 	CONSTRAINT fk_boeking_dienst_boeking FOREIGN KEY ( fk_boeking_id ) REFERENCES groep_66.boeking( boeking_id )
  );
 
 CREATE  TABLE groep_66.kamer ( 
-	kamer_id             char(10)  NOT NULL  ,
+	kamer_id             char(7)  NOT NULL  ,
 	capaciteit           smallint  NOT NULL  ,
 	prijs                smallint  NOT NULL  ,
 	"type"               varchar(50)  NOT NULL  ,
 	fk_schip_id          char(11)  NOT NULL  ,
 	fk_boeking_id        char(13)    ,
-	CONSTRAINT pk_kamer PRIMARY KEY ( kamer_id ),
-	CONSTRAINT fk_kamer_schip FOREIGN KEY ( fk_schip_id ) REFERENCES groep_66.schip( schip_id ),
+	CONSTRAINT pk_kamer PRIMARY KEY ( kamer_id, fk_schip_id )  ,
+	CONSTRAINT fk_kamer_schip FOREIGN KEY ( fk_schip_id ) REFERENCES groep_66.schip( schip_id )  ,
 	CONSTRAINT fk_kamer_boeking FOREIGN KEY ( fk_boeking_id ) REFERENCES groep_66.boeking( boeking_id )
  );
 
@@ -99,8 +100,8 @@ CREATE  TABLE groep_66.passagier (
 	email                varchar(100)  NOT NULL  ,
 	geboortedatum        date  NOT NULL  ,
 	nationaliteit        char(2)  NOT NULL  ,
-	fk_boeking_id        char(10)  NOT NULL  ,
-	CONSTRAINT pk_passagier PRIMARY KEY ( passagier_id ),
+	fk_boeking_id        char(13)  NOT NULL  ,
+	CONSTRAINT pk_passagier PRIMARY KEY ( passagier_id )  ,
 	CONSTRAINT fk_passagier_boeking FOREIGN KEY ( fk_boeking_id ) REFERENCES groep_66.boeking( boeking_id )
  );
 

@@ -167,21 +167,21 @@ INSERT INTO groep_66.cruise( cruise_id, naam, prijs, vertrek, aankomst, fk_schip
 INSERT INTO groep_66.cruise( cruise_id, naam, prijs, vertrek, aankomst, fk_schip_id, fk_route_id ) VALUES ( 'STU-345', 'Caribbean Queen', 2650, '2026-12-01', '2026-12-08', 'IMO-9283746', 'SE482B');
 
 
-INSERT INTO groep_66.boeking( boeking_id, datum, fk_cruise_id, fk_passagier_id ) VALUES ( 'ENKEL_LB.23-1', '2023-06-15', 'ABC-123', 'PS-12AB');
-INSERT INTO groep_66.boeking( boeking_id, datum, fk_cruise_id, fk_passagier_id ) VALUES ( 'ROMAN_SK.45-2', '2024-03-22', 'GHI-789', 'PS-56EF');
-INSERT INTO groep_66.boeking( boeking_id, datum, fk_cruise_id, fk_passagier_id ) VALUES ( 'GEZIN_AW.67-4', '2023-11-10', 'STU-901', 'PS-90IJ');
-INSERT INTO groep_66.boeking( boeking_id, datum, fk_cruise_id, fk_passagier_id ) VALUES ( 'EXTRA_UV.89-8', '2023-08-07', 'ABC-123', 'PS-12UW');
-INSERT INTO groep_66.boeking( boeking_id, datum, fk_cruise_id, fk_passagier_id ) VALUES ( 'ROMAN_EY.12-2', '2024-01-25', 'STU-901', 'PS-34GH');
-INSERT INTO groep_66.boeking( boeking_id, datum, fk_cruise_id, fk_passagier_id ) VALUES ( 'GEZIN_BN.34-4', '2023-02-11', 'GHI-789', 'PS-12OP');
-INSERT INTO groep_66.boeking( boeking_id, datum, fk_cruise_id, fk_passagier_id ) VALUES ( 'ENKEL_FM.56-1', '2023-05-17', 'ABC-123', 'PS-51PF');
-INSERT INTO groep_66.boeking( boeking_id, datum, fk_cruise_id, fk_passagier_id ) VALUES ( 'ROMAN_HZ.78-2', '2023-09-03', 'GHI-789', 'PS-78UV');
-INSERT INTO groep_66.boeking( boeking_id, datum, fk_cruise_id, fk_passagier_id ) VALUES ( 'GEZIN_IV.90-4', '2023-07-11', 'STU-901', 'PS-56CD');
-INSERT INTO groep_66.boeking( boeking_id, datum, fk_cruise_id, fk_passagier_id ) VALUES ( 'EXTRA_QD.23-8', '2023-04-19', 'ABC-123', 'PS-34KL');
-INSERT INTO groep_66.boeking( boeking_id, datum, fk_cruise_id, fk_passagier_id ) VALUES ( 'ROMAN_RP.56-2', '2024-02-10', 'STU-901', 'PS-72AB');
-INSERT INTO groep_66.boeking( boeking_id, datum, fk_cruise_id, fk_passagier_id ) VALUES ( 'GEZIN_MX.78-4', '2023-01-08', 'GHI-789', 'PS-12CB');
-INSERT INTO groep_66.boeking( boeking_id, datum, fk_cruise_id, fk_passagier_id ) VALUES ( 'ENKEL_YG.45-1', '2023-06-30', 'ABC-123', 'PS-56GF');
-INSERT INTO groep_66.boeking( boeking_id, datum, fk_cruise_id, fk_passagier_id ) VALUES ( 'ROMAN_PW.67-2', '2024-03-15', 'GHI-789', 'PS-34PN');
-INSERT INTO groep_66.boeking( boeking_id, datum, fk_cruise_id, fk_passagier_id ) VALUES ( 'GEZIN_KJ.89-4', '2023-10-12', 'STU-901', 'PS-78QR');
+INSERT INTO groep_66.boeking( boeking_id, datum, fk_cruise_id, fk_passagier_id ) VALUES ( 'ENKEL_LB.23-1', '2023-06-15', 'ABC-123', NULL);
+INSERT INTO groep_66.boeking( boeking_id, datum, fk_cruise_id, fk_passagier_id ) VALUES ( 'ROMAN_SK.45-2', '2024-03-22', 'GHI-789', NULL);
+INSERT INTO groep_66.boeking( boeking_id, datum, fk_cruise_id, fk_passagier_id ) VALUES ( 'GEZIN_AW.67-4', '2023-11-10', 'STU-901', NULL);
+INSERT INTO groep_66.boeking( boeking_id, datum, fk_cruise_id, fk_passagier_id ) VALUES ( 'EXTRA_UV.89-8', '2023-08-07', 'ABC-123', NULL);
+INSERT INTO groep_66.boeking( boeking_id, datum, fk_cruise_id, fk_passagier_id ) VALUES ( 'ROMAN_EY.12-2', '2024-01-25', 'STU-901', NULL);
+INSERT INTO groep_66.boeking( boeking_id, datum, fk_cruise_id, fk_passagier_id ) VALUES ( 'GEZIN_BN.34-4', '2023-02-11', 'GHI-789', NULL);
+INSERT INTO groep_66.boeking( boeking_id, datum, fk_cruise_id, fk_passagier_id ) VALUES ( 'ENKEL_FM.56-1', '2023-05-17', 'ABC-123', NULL);
+INSERT INTO groep_66.boeking( boeking_id, datum, fk_cruise_id, fk_passagier_id ) VALUES ( 'ROMAN_HZ.78-2', '2023-09-03', 'GHI-789', NULL);
+INSERT INTO groep_66.boeking( boeking_id, datum, fk_cruise_id, fk_passagier_id ) VALUES ( 'GEZIN_IV.90-4', '2023-07-11', 'STU-901', NULL);
+INSERT INTO groep_66.boeking( boeking_id, datum, fk_cruise_id, fk_passagier_id ) VALUES ( 'EXTRA_QD.23-8', '2023-04-19', 'ABC-123', NULL);
+INSERT INTO groep_66.boeking( boeking_id, datum, fk_cruise_id, fk_passagier_id ) VALUES ( 'ROMAN_RP.56-2', '2024-02-10', 'STU-901', NULL);
+INSERT INTO groep_66.boeking( boeking_id, datum, fk_cruise_id, fk_passagier_id ) VALUES ( 'GEZIN_MX.78-4', '2023-01-08', 'GHI-789', NULL);
+INSERT INTO groep_66.boeking( boeking_id, datum, fk_cruise_id, fk_passagier_id ) VALUES ( 'ENKEL_YG.45-1', '2023-06-30', 'ABC-123', NULL);
+INSERT INTO groep_66.boeking( boeking_id, datum, fk_cruise_id, fk_passagier_id ) VALUES ( 'ROMAN_PW.67-2', '2024-03-15', 'GHI-789', NULL);
+INSERT INTO groep_66.boeking( boeking_id, datum, fk_cruise_id, fk_passagier_id ) VALUES ( 'GEZIN_KJ.89-4', '2023-10-12', 'STU-901', NULL);
 
 
 INSERT INTO groep_66.boeking_dienst( fk_boeking_id, fk_dienst_id ) VALUES ( 'ENKEL_LB.23-1', 'OV-EX-01');
@@ -403,7 +403,7 @@ INSERT INTO groep_66.passagier( passagier_id, geslacht, naam, voornaam, email, g
 INSERT INTO groep_66.passagier( passagier_id, geslacht, naam, voornaam, email, geboortedatum, nationaliteit, fk_boeking_id ) VALUES ( 'PS-78GH', 'F', 'Bakker', 'Sophie', 'sophie_bakker56@hotmail.com', '1993-11-18', 'BE', 'ROMAN_SK.45-2');
 INSERT INTO groep_66.passagier( passagier_id, geslacht, naam, voornaam, email, geboortedatum, nationaliteit, fk_boeking_id ) VALUES ( 'PS-90IJ', 'M', 'van der Meer', 'Tom', 'tom.vandermeer76@gmail.com', '1995-08-09', 'NL', 'GEZIN_AW.67-4');
 INSERT INTO groep_66.passagier( passagier_id, geslacht, naam, voornaam, email, geboortedatum, nationaliteit, fk_boeking_id ) VALUES ( 'PS-12KL', 'X', 'Koster', 'Sam', 'sam.koster88@gmail.com', '1989-02-14', 'NL', 'GEZIN_AW.67-4');
-INSERT INTO groep_66.passagier( passagier_id, geslacht, naam, voornaam, email, geboortedatum, nationaliteit, fk_boeking_id ) VALUES ( 'PS-34MN', 'M', 'Brouwer', 'Joris', 'jorisbrouwer100@hotmail.com', '1980-10-25', 'NL', 'GEZIN_AW.67-4');
+INSERT INTO groep_66.passagier( passagier_id, geslacht, naam, voornaam, email, geboortedatum, nationaliteit, fk_boeking_id ) VALUES ( 'PS-34MN', 'M', 'Brouwer', 'Mark', 'm.brouwer90@hotmail.com', '1980-10-25', 'NL', 'GEZIN_AW.67-4');
 INSERT INTO groep_66.passagier( passagier_id, geslacht, naam, voornaam, email, geboortedatum, nationaliteit, fk_boeking_id ) VALUES ( 'PS-56OP', 'F', 'Huisman', 'Eva', 'eva.huisman57@gmail.com', '1992-04-17', 'NL', 'GEZIN_AW.67-4');
 INSERT INTO groep_66.passagier( passagier_id, geslacht, naam, voornaam, email, geboortedatum, nationaliteit, fk_boeking_id ) VALUES ( 'PS-12UW', 'M', 'Peters', 'Koen', 'koen.peters21@gmail.com', '1983-01-15', 'DE', 'EXTRA_UV.89-8');
 INSERT INTO groep_66.passagier( passagier_id, geslacht, naam, voornaam, email, geboortedatum, nationaliteit, fk_boeking_id ) VALUES ( 'PS-34WX', 'F', 'Lammers', 'Linda', 'linda.lammers68@gmail.com', '1990-07-08', 'DE', 'EXTRA_UV.89-8');
@@ -429,15 +429,32 @@ INSERT INTO groep_66.passagier( passagier_id, geslacht, naam, voornaam, email, g
 INSERT INTO groep_66.passagier( passagier_id, geslacht, naam, voornaam, email, geboortedatum, nationaliteit, fk_boeking_id ) VALUES ( 'PS-12ST', 'F', 'Bakker', 'Kirsten', 'kirsten.bakker14@hotmail.com', '1989-07-18', 'DE', 'EXTRA_QD.23-8');
 INSERT INTO groep_66.passagier( passagier_id, geslacht, naam, voornaam, email, geboortedatum, nationaliteit, fk_boeking_id ) VALUES ( 'PS-34UV', 'M', 'Cramer', 'Leon', 'leon.cramer55@gmail.com', '1994-10-05', 'BE', 'EXTRA_QD.23-8');
 INSERT INTO groep_66.passagier( passagier_id, geslacht, naam, voornaam, email, geboortedatum, nationaliteit, fk_boeking_id ) VALUES ( 'PS-56WX', 'F', 'Kramer', 'Eva', 'eva.kramer29@gmail.com', '1990-03-22', 'NL', 'EXTRA_QD.23-8');
-INSERT INTO groep_66.passagier( passagier_id, geslacht, naam, voornaam, email, geboortedatum, nationaliteit, fk_boeking_id ) VALUES ( 'PS-12CB', 'M', 'Janssen', 'Jan', 'jan.janssen1985@gmail.com', '1990-05-12', 'NL', 'GEZIN_MX.78-4');
+INSERT INTO groep_66.passagier( passagier_id, geslacht, naam, voornaam, email, geboortedatum, nationaliteit, fk_boeking_id ) VALUES ( 'PS-12CB', 'M', 'Vanyvel', 'Erik', 'yvel.erik@gmail.com', '1990-05-12', 'NL', 'GEZIN_MX.78-4');
 INSERT INTO groep_66.passagier( passagier_id, geslacht, naam, voornaam, email, geboortedatum, nationaliteit, fk_boeking_id ) VALUES ( 'PS-34CD', 'F', 'Smit', 'Anna', 'anna.smit23@hotmail.com', '1985-07-22', 'BE', 'GEZIN_MX.78-4');
-INSERT INTO groep_66.passagier( passagier_id, geslacht, naam, voornaam, email, geboortedatum, nationaliteit, fk_boeking_id ) VALUES ( 'PS-56GF', 'M', 'de Vries', 'Mark', 'mark.devries34@gmail.com', '1987-03-30', 'NL', 'ENKEL_YG.45-1');
+INSERT INTO groep_66.passagier( passagier_id, geslacht, naam, voornaam, email, geboortedatum, nationaliteit, fk_boeking_id ) VALUES ( 'PS-56GF', 'M', 'Hansen', 'Hans', 'h.hans@gmail.com', '1987-03-30', 'NL', 'ENKEL_YG.45-1');
 INSERT INTO groep_66.passagier( passagier_id, geslacht, naam, voornaam, email, geboortedatum, nationaliteit, fk_boeking_id ) VALUES ( 'PS-34PN', 'M', 'Brouwer', 'Joris', 'jorisbrouwer100@hotmail.com', '1980-10-25', 'NL', 'ROMAN_PW.67-2');
-INSERT INTO groep_66.passagier( passagier_id, geslacht, naam, voornaam, email, geboortedatum, nationaliteit, fk_boeking_id ) VALUES ( 'PS-59OP', 'F', 'Huisman', 'Eva', 'eva.huisman57@gmail.com', '1992-04-17', 'NL', 'ROMAN_PW.67-2');
+INSERT INTO groep_66.passagier( passagier_id, geslacht, naam, voornaam, email, geboortedatum, nationaliteit, fk_boeking_id ) VALUES ( 'PS-59OP', 'F', 'Huisman', 'Luna', 'Luna.huisman57@gmail.com', '1992-04-17', 'NL', 'ROMAN_PW.67-2');
 INSERT INTO groep_66.passagier( passagier_id, geslacht, naam, voornaam, email, geboortedatum, nationaliteit, fk_boeking_id ) VALUES ( 'PS-78QR', 'M', 'van Dijk', 'Lars', 'larsvandijk38@hotmail.com', '1986-09-30', 'NL', 'GEZIN_KJ.89-4');
 INSERT INTO groep_66.passagier( passagier_id, geslacht, naam, voornaam, email, geboortedatum, nationaliteit, fk_boeking_id ) VALUES ( 'PS-90ST', 'F', 'Visser', 'Emma', 'emma.visser92@hotmail.com', '1994-12-06', 'BE', 'GEZIN_KJ.89-4');
-INSERT INTO groep_66.passagier( passagier_id, geslacht, naam, voornaam, email, geboortedatum, nationaliteit, fk_boeking_id ) VALUES ( 'PS-12UV', 'M', 'Peters', 'Koen', 'koen.peters21@gmail.com', '1983-01-15', 'BE', 'GEZIN_KJ.89-4');
-INSERT INTO groep_66.passagier( passagier_id, geslacht, naam, voornaam, email, geboortedatum, nationaliteit, fk_boeking_id ) VALUES ( 'PS-34XX', 'F', 'Lammers', 'Linda', 'linda.lammers68@gmail.com', '1990-07-08', 'DE', 'GEZIN_KJ.89-4');
-INSERT INTO groep_66.passagier( passagier_id, geslacht, naam, voornaam, email, geboortedatum, nationaliteit, fk_boeking_id ) VALUES ( 'PS-72AB', 'M', 'Janssen', 'Jan', 'jan.janssen1985@gmail.com', '1990-05-12', 'NL', 'ROMAN_RP.56-2');
-INSERT INTO groep_66.passagier( passagier_id, geslacht, naam, voornaam, email, geboortedatum, nationaliteit, fk_boeking_id ) VALUES ( 'PS-38SD', 'F', 'Smit', 'Anna', 'anna.smit23@hotmail.com', '1985-07-22', 'BE', 'ROMAN_RP.56-2');
-INSERT INTO groep_66.passagier( passagier_id, geslacht, naam, voornaam, email, geboortedatum, nationaliteit, fk_boeking_id ) VALUES ( 'PS-51PF', 'M', 'de Vries', 'Mark', 'mark.devries34@gmail.com', '1987-03-30', 'NL', 'ENKEL_FM.56-1');
+INSERT INTO groep_66.passagier( passagier_id, geslacht, naam, voornaam, email, geboortedatum, nationaliteit, fk_boeking_id ) VALUES ( 'PS-12UV', 'M', 'Verbele', 'Koen', 'koen.verbele@gmail.com', '1983-01-15', 'BE', 'GEZIN_KJ.89-4');
+INSERT INTO groep_66.passagier( passagier_id, geslacht, naam, voornaam, email, geboortedatum, nationaliteit, fk_boeking_id ) VALUES ( 'PS-34XX', 'F', 'Lammers', 'Lisa', 'lisa.lammers68@gmail.com', '1990-07-08', 'DE', 'GEZIN_KJ.89-4');
+INSERT INTO groep_66.passagier( passagier_id, geslacht, naam, voornaam, email, geboortedatum, nationaliteit, fk_boeking_id ) VALUES ( 'PS-72AB', 'M', 'Jaap', 'Jan', 'janjaap@gmail.com', '1990-05-12', 'NL', 'ROMAN_RP.56-2');
+INSERT INTO groep_66.passagier( passagier_id, geslacht, naam, voornaam, email, geboortedatum, nationaliteit, fk_boeking_id ) VALUES ( 'PS-38SD', 'F', 'Smit', 'Anne', 'anne.smit21@hotmail.com', '1985-07-22', 'BE', 'ROMAN_RP.56-2');
+INSERT INTO groep_66.passagier( passagier_id, geslacht, naam, voornaam, email, geboortedatum, nationaliteit, fk_boeking_id ) VALUES ( 'PS-51PF', 'M', 'Douglas', 'Bart', 'Bdouglas@gmail.com', '1987-03-30', 'NL', 'ENKEL_FM.56-1');
+
+
+UPDATE groep_66.boeking SET fk_passagier_id = 'PS-12AB' WHERE boeking_id = 'ENKEL_LB.23-1';
+UPDATE groep_66.boeking SET fk_passagier_id = 'PS-56EF' WHERE boeking_id = 'ROMAN_SK.45-2';
+UPDATE groep_66.boeking SET fk_passagier_id = 'PS-90IJ' WHERE boeking_id = 'GEZIN_AW.67-4';
+UPDATE groep_66.boeking SET fk_passagier_id = 'PS-12UW' WHERE boeking_id = 'EXTRA_UV.89-8';
+UPDATE groep_66.boeking SET fk_passagier_id = 'PS-34GH' WHERE boeking_id = 'ROMAN_EY.12-2';
+UPDATE groep_66.boeking SET fk_passagier_id = 'PS-12OP' WHERE boeking_id = 'GEZIN_BN.34-4';
+UPDATE groep_66.boeking SET fk_passagier_id = 'PS-51PF' WHERE boeking_id = 'ENKEL_FM.56-1';
+UPDATE groep_66.boeking SET fk_passagier_id = 'PS-78UV' WHERE boeking_id = 'ROMAN_HZ.78-2';
+UPDATE groep_66.boeking SET fk_passagier_id = 'PS-56CD' WHERE boeking_id = 'GEZIN_IV.90-4';
+UPDATE groep_66.boeking SET fk_passagier_id = 'PS-34KL' WHERE boeking_id = 'EXTRA_QD.23-8';
+UPDATE groep_66.boeking SET fk_passagier_id = 'PS-72AB' WHERE boeking_id = 'ROMAN_RP.56-2';
+UPDATE groep_66.boeking SET fk_passagier_id = 'PS-12CB' WHERE boeking_id = 'GEZIN_MX.78-4';
+UPDATE groep_66.boeking SET fk_passagier_id = 'PS-56GF' WHERE boeking_id = 'ENKEL_YG.45-1';
+UPDATE groep_66.boeking SET fk_passagier_id = 'PS-34PN' WHERE boeking_id = 'ROMAN_PW.67-2';
+UPDATE groep_66.boeking SET fk_passagier_id = 'PS-78QR' WHERE boeking_id = 'GEZIN_KJ.89-4';

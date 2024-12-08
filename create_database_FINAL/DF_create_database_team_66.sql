@@ -1,5 +1,8 @@
+
+-- indien het schema nog niet bestaat wordt het hier gemaakt.
 CREATE SCHEMA IF NOT EXISTS groep_66;
 
+-- hier maken we de tabellen aan.
 CREATE  TABLE groep_66.dienst ( 
 	dienst_id            char(8)  NOT NULL  ,
 	dienst               varchar(50)  NOT NULL  ,
@@ -63,6 +66,8 @@ CREATE  TABLE groep_66.cruise (
 	CONSTRAINT fk_cruise_vaarroute FOREIGN KEY ( fk_route_id ) REFERENCES groep_66.vaarroute( route_id )   
  );
 
+-- in deze tabel kunnen we de FK van passagier nog niet toewijzen aangezien de tabel nog niet is aangemaakt
+-- de tabel passagier bevat ook een FK van boeking, dus de tabellen in de andere volgorde creëren geeft hetzelfde probleem.
 CREATE  TABLE groep_66.boeking ( 
 	boeking_id           char(13)  NOT NULL  ,
 	datum                date  NOT NULL  ,
@@ -105,4 +110,5 @@ CREATE  TABLE groep_66.passagier (
 	CONSTRAINT fk_passagier_boeking FOREIGN KEY ( fk_boeking_id ) REFERENCES groep_66.boeking( boeking_id )
  );
 
+-- nu kunnen we de FK van boeking laten verwijzen naar passagier_id.
 ALTER TABLE groep_66.boeking ADD CONSTRAINT fk_boeking_passagier FOREIGN KEY ( fk_passagier_id ) REFERENCES groep_66.passagier( passagier_id );

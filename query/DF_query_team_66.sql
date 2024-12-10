@@ -1,6 +1,9 @@
 ------------------------------------------------------------
 ------------------------------------------------------------
 
+-- Laat zien hoeveel de hoofdboeker moet betalen.
+-- geeft de e-mail van de Hboeker en de totale prijs.
+
 SET search_path TO groep_66;
 
 SELECT 
@@ -26,6 +29,9 @@ ORDER BY P.naam;
 ------------------------------------------------------------
 ------------------------------------------------------------
 
+-- Geeft de populairste reisbestemming (cruise) van de belgen weer,
+-- en we kunnen aflezen of ze liever voor goedkopere bestemmingen gaan of niet.
+
 SET search_path TO groep_66;
 
 SELECT
@@ -43,6 +49,10 @@ ORDER BY aantal_boekingen DESC;
 
 ------------------------------------------------------------
 ------------------------------------------------------------
+
+-- Geeft de cruises en de schepen waarmee ze gevaart worden,
+-- en we kunnen makkelijk bevestigen dat de havens waar de cruise passeert 
+-- diep genoeg zijn voor onze schepen om er aan te meren.
 
 SET search_path TO groep_66;
 
@@ -67,55 +77,68 @@ ORDER BY C.naam
 ------------------------------------------------------------
 ------------------------------------------------------------
 
+-- Geeft in volgorde weer welke cruise het meeste geld hebben opgebracht.
+-- we kunnen ook aflezen of mensen meer geintereseerd zijn in lange cruises.
+
 SET search_path TO groep_66;
 
 SELECT 
     V.route_id, 
-    V.duur AS route_duur,
-    C.naam AS cruise_naam,
-    S.naam AS schip_naam, 
-    (C.prijs * COUNT(DISTINCT B.boeking_id)) AS totale_omzet
+    V.duur AS dagen_op_zee,
+    C.naam AS naam_cruise,
+    S.naam AS naam_schip, 
+	COUNT(DISTINCT B.boeking_id) AS boekingen,
+	C.prijs AS prijs_cruise,
+    (C.prijs * COUNT(DISTINCT B.boeking_id)) AS totaal_winst
 FROM vaarroute V
 	INNER JOIN cruise C ON V.route_id = C.fk_route_id
 	INNER JOIN schip S ON C.fk_schip_id = S.schip_id
 	INNER JOIN boeking B ON C.cruise_id = B.fk_cruise_id
 GROUP BY 
     V.route_id, V.duur, C.naam, S.naam, C.prijs
-ORDER BY totale_omzet DESC LIMIT 10;
+HAVING (C.prijs * COUNT(DISTINCT B.boeking_id)) > 8000
+ORDER BY totaal_winst DESC;
+
+-- Hulpquery voor demo.
+SELECT *
+FROM groep_66.boeking
+ORDER BY fk_cruise_id
 
 ------------------------------------------------------------
 ------------------------------------------------------------
 
 SET search_path TO groep_66;
-SELECT 
-    cruise.naam AS cruise_naam,
-    schip.naam AS schip_naam,
-    haven_start.locatie AS vertrek_haven,  -- Naam van de vertrekhaven
-    haven_eind.locatie AS aankomst_haven,  -- Naam van de aankomsthaven
-    MIN(cruise.vertrek) AS vertrek_datum,  -- Eerste vertrekdatum
-    MAX(cruise.aankomst) AS aankomst_datum,  -- Laatste aankomstdatum
-    (MAX(cruise.aankomst) - MIN(cruise.vertrek)) AS aantal_dagen,  -- Aantal dagen van de reis
-    SUM(cruise.prijs) AS totale_reis_prijs  -- Totale prijs van de reis
-FROM cruise
-	INNER JOIN schip ON cruise.fk_schip_id = schip.schip_id
-	INNER JOIN vaarroute ON cruise.fk_route_id = vaarroute.route_id
-	INNER JOIN vaarroute_haven AS vh_start ON vaarroute.route_id = vh_start.fk_route_id
-    AND vh_start.van = (
-		SELECT MIN(van) 
-		FROM vaarroute_haven 
-		WHERE fk_route_id = vaarroute.route_id)
-	INNER JOIN vaarroute_haven AS vh_eind ON vaarroute.route_id = vh_eind.fk_route_id
-    AND vh_eind.tot = (
-		SELECT MAX(tot) 
-		FROM vaarroute_haven 
-		WHERE fk_route_id = vaarroute.route_id)
-	INNER JOIN haven AS haven_start ON vh_start.fk_haven_id = haven_start.haven_id
-	INNER JOIN haven AS haven_eind ON vh_eind.fk_haven_id = haven_eind.haven_id
-	LEFT JOIN boeking ON cruise.cruise_id = boeking.fk_cruise_id
-	LEFT JOIN passagier ON boeking.fk_passagier_id = passagier.passagier_id
+
+SELECT
+    C.naam AS naam_cruise,
+    S.naam AS naam_schip,
+    H_START.locatie AS vertrek_haven,
+	C.vertrek AS vertrek_datum,
+    H_END.locatie AS aankomst_haven,
+    C.aankomst AS aankomst_datum,
+    V.duur AS aantal_dagen
+FROM cruise C
+	INNER JOIN schip S ON C.fk_schip_id = S.schip_id
+	INNER JOIN vaarroute V ON C.fk_route_id = V.route_id
+	
+	INNER JOIN vaarroute_haven AS VH_START ON V.route_id = VH_START.fk_route_id
+    AND VH_START.van = ( SELECT MIN(VH.van) 
+		FROM vaarroute_haven AS VH
+		WHERE VH.fk_route_id = V.route_id )
+	INNER JOIN haven AS H_START ON VH_START.fk_haven_id = H_START.haven_id
+	
+	INNER JOIN vaarroute_haven AS VH_END ON V.route_id = VH_END.fk_route_id
+    AND VH_END.tot = ( SELECT MAX(VH.tot) 
+		FROM vaarroute_haven AS VH
+		WHERE VH.fk_route_id = V.route_id )
+	INNER JOIN haven AS H_END ON VH_END.fk_haven_id = H_END.haven_id
+WHERE
+	C.naam = 'Northern Lights Expedition'
+	OR C.naam = 'Caribbean Escape'
+	OR C.naam ='Mediterranean Wonders'
 GROUP BY 
-    cruise.naam, schip.naam, schip.max_passagiers, haven_start.locatie, haven_eind.locatie, cruise.vertrek
-ORDER BY cruise.vertrek ASC;  -- Sorteer op vertrekdatum in oplopende volgorde
+    C.naam, S.naam, H_START.locatie, H_END.locatie, C.vertrek, C.aankomst, V.duur
+ORDER BY C.vertrek ASC;
 
 ------------------------------------------------------------
 ------------------------------------------------------------

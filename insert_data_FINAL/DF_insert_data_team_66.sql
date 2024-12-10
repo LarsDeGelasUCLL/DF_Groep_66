@@ -46,11 +46,11 @@ INSERT INTO groep_66.haven( haven_id, diepgang, locatie ) VALUES ( 'MXVER', 16, 
 
 INSERT INTO groep_66.schip( schip_id, naam, max_passagiers, diepgang ) VALUES ( 'IMO-7834521', 'Ocean Voyager', 3200, 12);
 INSERT INTO groep_66.schip( schip_id, naam, max_passagiers, diepgang ) VALUES ( 'IMO-9153748', 'Sea Explorer', 5100, 10);
-INSERT INTO groep_66.schip( schip_id, naam, max_passagiers, diepgang ) VALUES ( 'IMO-6342785', 'Marine Adventurer', 5800, 14);
+INSERT INTO groep_66.schip( schip_id, naam, max_passagiers, diepgang ) VALUES ( 'IMO-6342785', 'Marine Adventurer', 5800, 9);
 INSERT INTO groep_66.schip( schip_id, naam, max_passagiers, diepgang ) VALUES ( 'IMO-7239482', 'Wave Pioneer', 800, 9);
 INSERT INTO groep_66.schip( schip_id, naam, max_passagiers, diepgang ) VALUES ( 'IMO-8613497', 'Ocean Wanderer', 1500, 8);
 INSERT INTO groep_66.schip( schip_id, naam, max_passagiers, diepgang ) VALUES ( 'IMO-4728931', 'Blue Horizon', 3400, 11);
-INSERT INTO groep_66.schip( schip_id, naam, max_passagiers, diepgang ) VALUES ( 'IMO-5912738', 'Ocean Pearl', 4200, 13);
+INSERT INTO groep_66.schip( schip_id, naam, max_passagiers, diepgang ) VALUES ( 'IMO-5912738', 'Ocean Pearl', 4200, 10);
 INSERT INTO groep_66.schip( schip_id, naam, max_passagiers, diepgang ) VALUES ( 'IMO-3748192', 'Sea Star', 2700, 10);
 INSERT INTO groep_66.schip( schip_id, naam, max_passagiers, diepgang ) VALUES ( 'IMO-1847392', 'Pacific Dream', 6000, 14);
 INSERT INTO groep_66.schip( schip_id, naam, max_passagiers, diepgang ) VALUES ( 'IMO-9283746', 'Coral Queen', 5400, 12);
@@ -436,7 +436,7 @@ INSERT INTO groep_66.passagier( passagier_id, geslacht, naam, voornaam, email, g
 INSERT INTO groep_66.passagier( passagier_id, geslacht, naam, voornaam, email, geboortedatum, nationaliteit, fk_boeking_id ) VALUES ( 'PS-59OP', 'F', 'Huisman', 'Luna', 'Luna.huisman57@gmail.com', '1992-04-17', 'NL', 'ROMAN_PW.67-2');
 INSERT INTO groep_66.passagier( passagier_id, geslacht, naam, voornaam, email, geboortedatum, nationaliteit, fk_boeking_id ) VALUES ( 'PS-78QR', 'M', 'van Dijk', 'Lars', 'larsvandijk38@hotmail.com', '1986-09-30', 'NL', 'GEZIN_KJ.89-4');
 INSERT INTO groep_66.passagier( passagier_id, geslacht, naam, voornaam, email, geboortedatum, nationaliteit, fk_boeking_id ) VALUES ( 'PS-90ST', 'F', 'Visser', 'Emma', 'emma.visser92@hotmail.com', '1994-12-06', 'BE', 'GEZIN_KJ.89-4');
-INSERT INTO groep_66.passagier( passagier_id, geslacht, naam, voornaam, email, geboortedatum, nationaliteit, fk_boeking_id ) VALUES ( 'PS-12UV', 'M', 'Verbele', 'Koen', 'koen.verbele@gmail.com', '1983-01-15', 'BE', 'GEZIN_KJ.89-4');
+INSERT INTO groep_66.passagier( passagier_id, geslacht, naam, voornaam, email, geboortedatum, nationaliteit, fk_boeking_id ) VALUES ( 'PS-12UV', 'M', 'De Gelas', 'Jari', 'jdg06@gmail.com', '1983-01-15', 'BE', 'GEZIN_KJ.89-4');
 INSERT INTO groep_66.passagier( passagier_id, geslacht, naam, voornaam, email, geboortedatum, nationaliteit, fk_boeking_id ) VALUES ( 'PS-34XX', 'F', 'Lammers', 'Lisa', 'lisa.lammers68@gmail.com', '1990-07-08', 'DE', 'GEZIN_KJ.89-4');
 INSERT INTO groep_66.passagier( passagier_id, geslacht, naam, voornaam, email, geboortedatum, nationaliteit, fk_boeking_id ) VALUES ( 'PS-72AB', 'M', 'Jaap', 'Jan', 'janjaap@gmail.com', '1990-05-12', 'NL', 'ROMAN_RP.56-2');
 INSERT INTO groep_66.passagier( passagier_id, geslacht, naam, voornaam, email, geboortedatum, nationaliteit, fk_boeking_id ) VALUES ( 'PS-38SD', 'F', 'Smit', 'Anne', 'anne.smit21@hotmail.com', '1985-07-22', 'BE', 'ROMAN_RP.56-2');
